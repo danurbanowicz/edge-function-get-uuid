@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Generate a UUID</title>
+    <style>
+      body { font-family: "avenir", "avenir next", helvetica, sans-serif; }
+    </style>
+  </head>
+  <body>
+    <h1>Generate a UUID</h1>
+
+    <p><em>TODO: use 11ty to generate this page from the README.md</em></p>
+
+
+    <p>This tool uses a serverless function with Node's built-in <a href="https://nodejs.org/api/crypto.html">Crypto</a> module to generate a random <abbr title="Universally Unique Identifier">UUID</abbr>.</p>
+    <p>Press the button below to generate a UUID.</p>
+    <button id="fetch-btn">Generate a UUID</button>
+    <p id="response-output">Response Placeholder</p>
+
+    <h2>How to use</h2>
+
+    <p>The serverless function that generates the UUID is accessible via its own endpoint URL, which when accessed from a browser or from your code, will return the UUID inside the response.</p>
+
+    <h2>Deploy</h2>
+    
+    <h3>Option 1: Deploy to Netlify</h3>
+    <p>Click the button below to deploy your own copy of this function to Netlify</p>
+    <p>Once deployed, you'll be able to generate a random UUID by accessing your function's endpoint URL at:<br><br>
+      https://your-netlify-site.netlify.app/.netlify/functions/get-uuid</p>
+    <button>Deploy to Netlify</button>
+
+    <h3>Option 2: Manual install</h3>
+    <p>Install the function manually inside your Netlify projects's <code>functions</code> folder</p>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+
+        const fetchBtn = document.getElementById('fetch-btn')
+        const responseText = document.getElementById('response-output')
+
+        fetchBtn.addEventListener('click', async () => {
+          const response = await fetch('/.netlify/functions/get-uuid')
+            .then(response => response.json()
+          )
+
+          responseText.innerText = JSON.stringify(response)
+        });
+
+      });
+    </script>
+
+  </body>
+</html>
