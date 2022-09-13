@@ -4,7 +4,7 @@
 
 ### What is it?
 
-A serverless [Edge Function](https://github.com/danurbanowicz/edge-function-get-uuid/blob/main/netlify/edge-functions/get-uuid.ts) example that returns a random v4 UUID and some basic user geolocation data from [Netlify's Edge CDN](https://docs.netlify.com/edge-functions/overview/).
+A serverless [Edge Function](https://docs.netlify.com/edge-functions/overview/) example that returns a random v4 UUID and some basic user geolocation data from Netlify's Edge CDN.
 
 ### Play around on the [Demo Site](https://edge-function-get-uuid.netlify.app/)
 
