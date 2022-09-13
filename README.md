@@ -19,5 +19,3 @@ Or deploy your own copy to Netlify
 ### Bug reports, feature requests, etc
 
 This repo is part of an ongoing project I am working on exploring common use cases for serverless functions, and I welcome contributions and suggestions. Feel free to submit an issue or PR!
-
-### TO DO: improve readme, improve demo fetch JS
