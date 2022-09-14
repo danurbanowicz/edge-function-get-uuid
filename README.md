@@ -1,6 +1,6 @@
 [![Netlify Status](https://api.netlify.com/api/v1/badges/2164afa3-77a2-4936-a217-de8463a29bd1/deploy-status)](https://app.netlify.com/sites/edge-function-get-uuid/deploys)
 
-# edge-function-get-uuid
+# Edge Function Get UUID
 
 ### What is it?
 
