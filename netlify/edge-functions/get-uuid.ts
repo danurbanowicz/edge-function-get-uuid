@@ -6,9 +6,7 @@ export default async (request: Request, context: Context) => {
   const val = v4.generate();
   
   return context.json({ 
-    uuid: val,
-    geo: context.geo,
-    header: request.headers.get("x-nf-geo"),
+    uuid: val
   });
 
 };

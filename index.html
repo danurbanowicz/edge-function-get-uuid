@@ -8,7 +8,7 @@
     <title>Generate a UUID at the Edge 🔪</title>
     <style>
       body { font-family: "Mulish", "avenir next", helvetica, sans-serif; text-align: center; font-weight: 300; font-size: 1.25rem;}
-      button { font-size: 1.5rem; padding: 1rem 2rem; border: 0; border-radius: .5rem; background-color: blue; color: white;}
+      button { font-size: 1.5rem; padding: 1rem 2rem; border: 0; border-radius: .5rem; background-color: blue; color: white; cursor: pointer;}
       #response-output { font-size: 1.5rem; }
       h1,h2,h3,h4,button { font-family: "Mulish", "avenir next", helvetica, sans-serif; font-weight: 800;}
     </style>
@@ -20,7 +20,6 @@
 
     <button id="fetch-btn">Generate a UUID</button>
     <h2 id="response-output">xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx</h2>
-    <p id="response-geo"></p>
 
     <p>You can also call the function endpoint directly to return a JSON object:
     <br><br>
@@ -36,7 +35,6 @@
 
         const fetchBtn = document.getElementById("fetch-btn");
         const responseText = document.getElementById("response-output");
-        const responseGeoText = document.getElementById("response-geo");
         
         fetchBtn.addEventListener("click", async () => {
 
@@ -45,7 +43,6 @@
           )
 
           responseText.innerText = response.uuid;
-          responseGeoText.innerText = "Your location: " + response.geo.city + ", " + response.geo.country.name;
           
         });
 
